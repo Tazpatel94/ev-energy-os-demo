@@ -1,0 +1,26 @@
+time_bin_minutes: 5
+depot_power_cap_kw: 350.0
+max_concurrent_chargers: 10
+tariff:
+  flat_energy_rate_per_kwh: 10.0
+  demand_charge_per_kw: 250.0
+  tou_blocks:
+  - start_hour: 0
+    end_hour: 6
+    rate_per_kwh: 8.0
+  - start_hour: 6
+    end_hour: 18
+    rate_per_kwh: 10.0
+  - start_hour: 18
+    end_hour: 23
+    rate_per_kwh: 12.0
+  - start_hour: 23
+    end_hour: 24
+    rate_per_kwh: 8.0
+savings_scenarios:
+  conservative:
+    depot_power_cap_kw: 320.0
+  expected:
+    depot_power_cap_kw: 350.0
+  aggressive:
+    depot_power_cap_kw: 380.0
